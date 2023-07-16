@@ -1,3 +1,4 @@
+import 'package:flut_demo/config/routes/routes.dart';
 import 'package:flut_demo/config/theme/app_themes.dart';
 import 'package:flut_demo/features/daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
 import 'package:flut_demo/features/daily_news/presentation/bloc/article/remote/remote_article_event.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       create: (context) => sl()..add(const GetArticles()),
       child: MaterialApp(
         theme: theme(),
+        onGenerateRoute: AppRoutes.onGenerateRoutes,
         home: const DailyNews(),
       ),
     );
