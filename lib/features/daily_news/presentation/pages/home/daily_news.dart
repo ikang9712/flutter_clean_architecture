@@ -41,7 +41,7 @@ class DailyNews extends StatelessWidget {
       if (state is RemoteArticlesDone) {
         return ListView.builder(
           itemBuilder: (context, index) {
-            print(state.articles![index].urlToImage);
+            print(state.articles!.length);
             return ArticleWidget(
               article: state.articles![index],
             );
